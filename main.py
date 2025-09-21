@@ -6,8 +6,8 @@ def main():
         main()
     try:
         n2 = int(input("Введи второе число: "))
-    except ValueError as а:
-        print("Ошибка: "+ str(а))
+    except ValueError as a:
+        print("Ошибка: "+ str(a))
         main()
     print("Список действий: \n "
           "1.Сложение\n"
@@ -36,7 +36,12 @@ def main():
           "24.Не принадлежность\n"
           "25.Тождественно\n"
           "26.Не тождественно\n")
-    deistv = int(input("Какое действие сделать: "))
+    try:
+        deistv = int(input("Какое действие сделать: "))
+    except ValueError as a:
+        print("Ошибка: "+ str(a))
+        main()
+
     if deistv == 1:
         print(n1+n2)
         main()
